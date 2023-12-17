@@ -1,0 +1,60 @@
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: -4;
+}
+
+.small_around {
+  height: 189px;
+  width: 189px;
+  border-radius: 50%;
+  border-bottom: 10px solid rgb(255, 153, 0);
+  animation-name: aroun;
+  z-index: 2;
+
+}
+
+.btn {
+  padding: 14px 28px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes aroun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.around {
+  animation: aroun 2s linear infinite; /* Добавляем анимацию при присутствии класса around */
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay.active {
+  display: block; /* Показываем overlay при наличии класса "active" */
+}
