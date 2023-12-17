@@ -1,12 +1,22 @@
 body{
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 
+.small_around {
+  height: 189px;
+  width: 189px;
+  border-radius: 50%;
+  border-bottom: 10px solid rgb(255, 153, 0);
+  animation : around 1s linear infinite  //burda deyirikki keyframesde qeyd elediyimiz functionu burada emel ele ve infinity sonsuz emel ele demekdir
+
+
+}
 
 
 
@@ -17,44 +27,18 @@ body{
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: -4;
-}
-
-.small_around {
-  height: 189px;
-  width: 189px;
-  border-radius: 50%;
-  border-bottom: 10px solid rgb(255, 153, 0);
-  animation-name: aroun;
-  z-index: 2;
 
 }
 
-.btn {
-  padding: 14px 28px;
-  background-color: #000;
-  color: #fff;
-  cursor: pointer;
-}
+
 
 @keyframes around {
   0% {
     transform: rotate(0deg);
-  }
+  }                                     //burda deyirik ki 0% da 0deg de olsun 100% i ise 360 deg dir
   100% {
     transform: rotate(360deg);
   }
 }
 
-.around {
-  animation: around 2s linear infinite; /* Добавляем анимацию при присутствии класса around */
-}
 
-.hidden {
-  display: none;
-}
-
-.overlay.active {
-  display: block; /* Показываем overlay при наличии класса "active" */
-}
