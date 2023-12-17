@@ -38,7 +38,7 @@ body{
   cursor: pointer;
 }
 
-@keyframes aroun {
+@keyframes around {
   0% {
     transform: rotate(0deg);
   }
@@ -48,7 +48,7 @@ body{
 }
 
 .around {
-  animation: aroun 2s linear infinite; /* Добавляем анимацию при присутствии класса around */
+  animation: around 2s linear infinite; /* Добавляем анимацию при присутствии класса around */
 }
 
 .hidden {
